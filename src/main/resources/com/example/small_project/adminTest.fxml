@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="639.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.small_project.Controllers.AdminController">
+   <children>
+      <TabPane prefHeight="639.0" prefWidth="761.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="514.0" prefWidth="639.0">
+                     <children>
+                        <Label fx:id="adminWelcomeLabel" alignment="CENTER" layoutX="182.0" layoutY="28.0" prefHeight="70.0" prefWidth="404.0" text="Welcome" wrapText="true">
+                           <font>
+                              <Font name="Yu Gothic Medium" size="33.0" />
+                           </font>
+                        </Label>
+                        <MFXButton layoutX="29.0" layoutY="118.0" onAction="#logOut" text="Log out" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Info">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Admin">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <MFXListView fx:id="userList" layoutX="427.0" layoutY="66.0" onMouseClicked="#userTrack" prefHeight="479.0" prefWidth="290.0" trackColor="#8a8585" />
+                        <MFXButton layoutX="327.0" layoutY="72.0" onAction="#removeUser" prefHeight="35.0" prefWidth="84.0" text="Remove" />
+                        <MFXButton layoutX="327.0" layoutY="118.0" onAction="#makeAdmin" prefHeight="35.0" prefWidth="84.0" text="Admin" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
